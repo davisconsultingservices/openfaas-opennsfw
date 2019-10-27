@@ -49,9 +49,9 @@ def classify_from_url(image_entry, nsfw_net):
         result = {'error_reason': str(e)}
 
     print(result)
-    f = open("output.json", "w")
-    f.write(json.dumps(result))
-    f.close()
+    # f = open("output.json", "w")
+    # f.write(json.dumps(result))
+    # f.close()
 
 def classify(image_data, nsfw_net):
     scores = classify_nsfw.caffe_preprocess_and_compute(

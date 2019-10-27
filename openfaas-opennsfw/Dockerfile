@@ -62,8 +62,7 @@ WORKDIR /home/app
 COPY classify.py /home/app
 
 ENV GLOG_minloglevel="3"
-# ENV fprocess="xargs python classify.py"
-ENV fprocess="python classify.py https://github.com/servernull/openfaas-exif/raw/master/image.jpg &> /dev/null && cat output.json"
+ENV fprocess="xargs python classify.py"
 ENV write_debug="false"
 
 EXPOSE 8080
