@@ -8,4 +8,4 @@ faas-cli deploy -y stack.yml
 
 
 # invoke
-echo "https://github.com/servernull/openfaas-exif/raw/master/image.jpg &> /dev/null && cat output.json" | faas-cli invoke openfaas-opennsfw
+echo https://github.com/servernull/openfaas-exif/raw/master/image.jpg | faas-cli invoke openfaas-opennsfw
