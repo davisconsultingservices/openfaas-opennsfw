@@ -14,4 +14,12 @@ echo https://github.com/servernull/openfaas-opennsfw/raw/master/puppy.jpg | faas
   "sfw_score": 0.9973425269126892,
   "nsfw_score": 0.0026575096417218447
 }
+
+echo https://github.com/servernull/openfaas-opennsfw/raw/master/eve.jpg | faas-cli invoke openfaas-opennsfw | jq
+
+{
+  "sfw_score": 0.12137062847614288,
+  "nsfw_score": 0.8786293268203735
+}
+
 ```
