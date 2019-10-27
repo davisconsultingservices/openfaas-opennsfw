@@ -36,16 +36,16 @@ def classify_from_url(image_entry, nsfw_net):
         req = urllib2.Request(image_entry, None, headers)
         with contextlib.closing(urllib2.urlopen(req)) as stream:
             score = classify(stream.read(), nsfw_net)
-            result = {'sfw_score': score[0], 'nsfw_score': score[1]}
+            result = {"sfw_score": score[0], "nsfw_score": score[1]}
 
     except urllib2.HTTPError as e:
-        result = {'error_reason': e.reason}
+        result = {"error_reason": e.reason}
 
     except urllib2.URLError as e:
-        result = {'error_reason': str(e.reason)}
+        result = {"error_reason": str(e.reason)}
 
     except Exception as e:
-        result = {'error_reason': str(e)}
+        result = {"error_reason": str(e)}
 
     print(result)
 
