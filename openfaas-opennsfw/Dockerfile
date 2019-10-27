@@ -56,8 +56,6 @@ RUN mkdir -p /home/app
 COPY --from=watchdog /fwatchdog /usr/bin/fwatchdog
 RUN chmod +x /usr/bin/fwatchdog
 
-USER root
-
 WORKDIR /home/app
 COPY classify.py /home/app
 
