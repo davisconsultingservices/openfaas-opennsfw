@@ -30,6 +30,7 @@ caffe_transformer = make_transformer(nsfw_net)
 
 
 def classify_from_url(image_entry, nsfw_net):
+    image_entry = image_entry.strip()
     headers = {'User-agent': 'Mozilla/5.0 (Windows; U; Windows NT 5.1; de; rv:1.9.1.5) Gecko/20091102 Firefox/3.5.5'}
     result = {}
     try:
@@ -47,7 +48,7 @@ def classify_from_url(image_entry, nsfw_net):
     except Exception as e:
         result = {"error_reason": str(e)}
 
-    print(result)
+    print(json.dumps(result))
 
 
 def classify(image_data, nsfw_net):

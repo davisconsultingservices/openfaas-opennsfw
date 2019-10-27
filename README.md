@@ -8,7 +8,10 @@ faas-cli deploy -y stack.yml
 
 
 # invoke
-echo https://github.com/servernull/openfaas-opennsfw/raw/master/puppy.jpg | faas-cli invoke openfaas-opennsfw
+echo https://github.com/servernull/openfaas-opennsfw/raw/master/puppy.jpg | faas-cli invoke openfaas-opennsfw | jq
 
-{'sfw_score': 0.99734252691268921, 'nsfw_score': 0.0026575096417218447}
+{
+  "sfw_score": 0.9973425269126892,
+  "nsfw_score": 0.0026575096417218447
+}
 ```
