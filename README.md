@@ -9,3 +9,6 @@ faas-cli deploy -y stack.yml
 
 # invoke
 echo https://github.com/servernull/openfaas-exif/raw/master/image.jpg | faas-cli invoke openfaas-opennsfw
+
+{"score": 0.001238283}
+```
