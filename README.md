@@ -1,5 +1,5 @@
 # openfaas-opennsfw
-An OpenFaaS function that runs [Yahoo's Open NSFW model](https://github.com/yahoo/open_nsfw), and is a fork of [EugenCepoi/nsfw_api](https://github.com/EugenCepoi/nsfw_api)
+An OpenFaaS function that is a fork of [EugenCepoi/nsfw_api](https://github.com/EugenCepoi/nsfw_api) and runs [Yahoo's Open NSFW model](https://github.com/yahoo/open_nsfw).
 
 ```bash
 
